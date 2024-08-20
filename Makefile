@@ -23,14 +23,14 @@
 # To use Trusted Input for segwit, app version must be kept > 2.0.0
 APPVERSION_M = 2
 APPVERSION_N = 0
-APPVERSION_P = 3
+APPVERSION_P = 1
 
-APPDEVELOPPER="Ledger"
-APPCOPYRIGHT="(c) 2024 Ledger"
+APPDEVELOPPER="Blooo"
+APPCOPYRIGHT="(c) 2024 Blooo"
 
-APPNAME ="Bitcoin clone boilerplate"
+APPNAME ="Acre"
 
-VARIANT_VALUES = bitcoin_clone_boilerplate
+VARIANT_VALUES = bitcoin
 
 # Application source files
 # There is no additional sources for bitcoin
@@ -38,26 +38,26 @@ VARIANT_VALUES = bitcoin_clone_boilerplate
 
 # simplify for tests
 ifndef COIN
-COIN=bitcoin_clone_boilerplate
+COIN=bitcoin
 endif
 
 # Enabling DEBUG flag will enable PRINTF and disable optimizations
 #DEBUG = 1
 
-ifeq ($(COIN),bitcoin_clone_boilerplate)
+ifeq ($(COIN),bitcoin)
 	
 # Refer to : https://github.com/dan-da/coinparams/blob/master/coinprefixes.md
-BIP44_COIN_TYPE=1
-BIP44_COIN_TYPE_2=1
-COIN_P2PKH_VERSION=111
-COIN_P2SH_VERSION=196
-COIN_NATIVE_SEGWIT_PREFIX=\"tb\" 
+BIP44_COIN_TYPE=0
+BIP44_COIN_TYPE_2=0
+COIN_P2PKH_VERSION=0
+COIN_P2SH_VERSION=5
+COIN_NATIVE_SEGWIT_PREFIX=\"bc\" 
 
 # Name of the coin that will be used in the app display
-COIN_COINID_NAME="Bitcoin Clone BP"
+COIN_COINID_NAME="Bitcoin"
 
 # Ticker that will be used in the transaction display
-COIN_COINID_SHORT=\"BP\" 
+COIN_COINID_SHORT=\"BTC\" 
 
 # Sign message magic header
 COIN_COINID=\"Bitcoin\"
